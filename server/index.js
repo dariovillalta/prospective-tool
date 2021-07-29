@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
+const xml = require('xml');
 
 app.get('/', (req, res) => {
-    res.send({ pregunta: 'Oye como va!' });
+    res.contentType('application/xml');
+    res.type('application/xml');
+    res.send(xml( {pregunta: 'Oye como va!'} ) );
 });
 
 app.post('/', (req, res) => {
