@@ -9,6 +9,6 @@ app.post('/', (req, res) => {
     console.log("req", req);
 });
 
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
     console.log('Application listening on port 3333!');
 });
